@@ -9,5 +9,6 @@
   <include file="$(find panda_moveit_config)/launch/panda_moveit.launch">
     <arg name="load_gripper" value="false" />
   </include>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_1" args="0 0 0 0 0 0 1 world panda_link0" />
   <node name="move_to_start" pkg="franka_example_controllers" type="move_to_start.py" output="screen" required="true" />
 </launch>
